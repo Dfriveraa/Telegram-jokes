@@ -1,6 +1,5 @@
-from app.debug import init_debug
-
 from app.bot import bot
+from app.debug import init_debug
 from app.logging import get_logging
 
 log = get_logging(__name__)
