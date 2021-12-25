@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  telegram-joke:
+    image: tele-joke
+    ports:
+      - 10002:10002
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dev
+    command: python main.py
+    env_file:
+      - ../.env
+    environment:
+      - DEBUGGER=True
+    volumes:
+      - ../:/usr/src/app/
